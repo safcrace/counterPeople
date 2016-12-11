@@ -6,7 +6,16 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
-
+                <p id="tiempo" style="display: block">
+                  @foreach ($data as $number)
+                           {{$number->fecha}},
+                  @endforeach
+                </p>
+                <p id="cantidad" style="display: block">
+                  @foreach ($data as $number)
+                           {{$number->cantidad}},
+                  @endforeach
+                </p>
                 <div class="container"  style="width: 40%">
                     <h3>Informe de Entradas/Salidas por Dia</h3>
                     <canvas id="myChartDiario" width="600" height="400"></canvas>

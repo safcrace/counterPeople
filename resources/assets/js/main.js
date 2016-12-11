@@ -22,7 +22,12 @@ require('./bootstrap');
 import Chart from 'chart.js'
 
 var ctx = document.getElementById("myChart").getContext("2d");
-
+var inMes = document.getElementById("tiempo").innerHTML;
+var inCantidad = document.getElementById("cantidad").innerHTML;
+var arr1, arr2 = [];
+arr1 = inMes.split(',');
+arr2 = inCantidad.split(',');
+alert("Hola: " + arr1 + " - " + arr2);
 
 var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -48,7 +53,7 @@ var data = {
                 'rgba(54, 162, 235, 1)'
             ],
             borderWidth: 1,
-            data: [65, 59, 80, 81, 56, 55, 50],
+            data:   arr,
         },
         {
             label: "Salidas",
