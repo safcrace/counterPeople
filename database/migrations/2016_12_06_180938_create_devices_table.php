@@ -15,8 +15,10 @@ class CreateDevicesTable extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->increments('id');
+            $table->char('imei',40);
             $table->timestamp('added_on');
-            $table->enum('action', ['in', 'out']);
+            $table->smallinteger('entry');
+            $table->smallinteger('departure');
             $table->timestamps();
         });
     }
